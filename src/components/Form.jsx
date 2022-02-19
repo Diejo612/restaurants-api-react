@@ -20,6 +20,8 @@ const Form = ({refresh}) => {
 
     const response = await fetch(url, requestOptions);
     refresh();
+    setName('');
+    setAddress('');
     console.log(response);
   }
 
@@ -30,11 +32,13 @@ const Form = ({refresh}) => {
         type="text"
         placeholder="Escriba un nombre"
         onChange={(e) => setName(e.currentTarget.value)}
+        value={name}
       />
       <input
         type="text"
         placeholder="Escriba una dirección"
         onChange={(e) => setAddress(e.currentTarget.value)}
+        value={address}
       />
       <button onClick={crearRestaurant}>
         Crear restaurant

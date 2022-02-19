@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div>
-      <Restaurant restaurantes={restaurantes}/>
+      <Restaurant restaurantes={restaurantes} refresh={initData}/>
       <Form refresh={initData}/>
     </div>
   );
